@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+/* =========================================================
+                CSS 변수 및 테이블 공통 레이아웃
+   ========================================================= */
 body {
     --table-border:1px solid var(--color-d);
     --table-th:#F0F6FF;
@@ -13,13 +16,11 @@ body {
     overflow:visible;
 }
 
-
 table{  border-spacing:0; border-collapse: collapse; table-layout:fixed; max-width:1200px; }
 
 table thead tr:first-child,
 table tbody tr:first-child { border-top:1px solid var(--color-2); }
 table thead + tbody tr:first-child { border-top:0; }
-
 
 table tr:first-of-type th { border-top:var(--color-2); }
 table tr:first-of-type td { border-top:var(--color-45); }
@@ -28,109 +29,103 @@ table td { padding:var(--table-pd); text-align:center; color:var(--default-color
 table th { background:var(--table-th); border-left:var(--table-border); font-weight:var(--font-w-m); color:var(--color-2); }
 table td { border-left:var(--table-border); border-top:var(--color-45); }
 
-table.list td,
-table.td-l td { border-left:0; }
 table td:first-child { border-left:0; }
 table th:first-of-type,
 table td:first-of-type { border-left:0; }
-table .bor-l { border-left:var(--table-border) !important; }
-table .bor-r { border-right:var(--table-border) !important; }
-table th label { font-weight:var(--font-w-m); }
-table td.title { text-align:left; }
-table tbody tr:has(td[rowspan]) + tr th:first-of-type,
-table tbody tr:has(td[rowspan]) + tr td:first-of-type { border-left:var(--table-border); }
-
 
 table tbody th { border-right:var(--table-border); }
 
-table.col-row tbody th { background:transparent; font-size:1rem; }
+table tbody tr:has(td[rowspan]) + tr th:first-of-type,
+table tbody tr:has(td[rowspan]) + tr td:first-of-type { border-left:var(--table-border); }
 
+/* =========================================================
+                    테이블 강조 및 예외 속성
+   ========================================================= */
+table .bor-l { border-left:var(--table-border) !important; }
+table .bor-r { border-right:var(--table-border) !important; }
+table th label { font-weight:var(--font-w-m); }
+
+/* 테이블 위에 텍스트 (caption) */
+.caption { padding-bottom:20px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:right; }
+
+/* 테이블 강조, 합계 클래스 26/03/03 추가*/
+thead th.success, tbody th.success { background-color:var(--primary); color: var(--white) !important; }
+.table-content table .sum  { font-weight:var(--font-w-m); color:var(--white); background-color:#0072BC; }
+.table-content th.sum ~ td {background-color: #EDF9FF;}
+
+/* =========================================================
+                        모바일 반응형 
+   ========================================================= */
+@media (max-width: 767px) {
+    table th, 
+    table td { font-size:1rem; }
+    table th { font-weight:var(--font-w-m); }
+
+    .caption { padding-bottom:18px; font-size:var(--font14); }
+}
+
+
+/* =========================================================
+    [백업 구역] - 당장 사용하지 않으므로 일단 주석 처리 (나중에 필요하면 살리거나 삭제 예정)
+   ========================================================= */
+/*
+table.list td,
+table.td-l td { border-left:0; }
+table td.title { text-align:left; }
+table.col-row tbody th { background:transparent; font-size:1rem; }
 table.td-al td { text-align:left; }
 
 .table-group + .m-dot { margin-top:-22px; }
-
 table th.div_sum { background:var(--white); font-weight:var(--font-w-m); border-right:var(--table-border); font-weight:var(--font-w-r);  }
 
-/* 테이블 위에 텍스트 */
 .total { padding-bottom:20px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:left; }
 .total em { color:var(--color-2); font-weight:var(--font-w-b); }
 .total em span { color:var(--primary); }
-.caption { padding-bottom:20px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:right; }
 .form-content:has(.caption.total) { display:flex; align-items:center; }
-
-/* 테이블 푸터 */
-.table-content { overflow:visible; }
 
 .table-content table tfoot tr:only-child,
 .table-content table tfoot tr:last-child { background-color:#EDF9FF; }
 .table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:#0072BC; }
 
-/* 조회결과 없음 */
 table:has(.no-results) { border:0; }
 table:has(.no-results) thead { display:none; }
 table:has(.no-results) td { margin:0; padding:0; border:0; }
 .no-results { padding-top:150px; width: 100%; border:var(--table-border); border-radius:8px; }
 .no-results p { padding-top:124px; width:100%; min-height:308px; font-size: var(--font28); font-weight: var(--font-w-m); text-align:center; background: url('../../images/content/no-result.png') no-repeat center top; background-size:120px 100px;}
-/* 완료 */
+
 .completed { padding:100px 0; width: 100%; border:var(--table-border); border-radius:8px; }
 .completed p { padding-top:124px; width:100%;  font-size: var(--font28); font-weight: var(--font-w-b); text-align:center; background: url('../../images/content/contrackComp.png') no-repeat center top; background-size:120px 100px;}
 .completed span {display: block; margin-top: 16px; width: 100%; font-weight: var(--font-w-r); color: var(--color-45); text-align: center;}
 .completed + .rfrnc { margin-top:20px; }
 .completed + .rfrnc li + li { margin-top:12px; }
 
-/* 공지사항 리스트 */
 .mo-list tbody tr td.title,
 .mo-list tbody tr td.title a { max-width:95%; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; text-align:left; }
 .mo-list tbody tr td.title span { display:inline-block; max-width:400px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
 
-
-
-/**테이블**/
 table.round { border:var(--table-border); border-bottom:0; border-collapse:separate; border-radius:16px; overflow:hidden; }
 
-/* 테이블 강조, 합계 클래스 26/03/03 추기*/
-thead th.success, tbody th.success { background-color:var(--primary); color: var(--white) !important; }
-.table-content table .sum  { font-weight:var(--font-w-m); color:var(--white); background-color:#0072BC; }
-.table-content th.sum ~ td {background-color: #EDF9FF;}
-
 @media (max-width:1200px){
-    /* .table-content:has(.mo-s) { overflow-x:auto; } */
     .table-content:has(.mo-s) table { table-layout:auto; }
     .table-content:has(.mo-s.mo-list) table { table-layout:fixed; }
-
     .table-content:has(.table-group) { overflow-x:hidden; }
     .table-content:has(.table-group) .table-group { overflow-x:auto; }
 }
 
 @media (max-width: 767px) {
-    table th, 
-    table td { font-size:1rem; }
-    table th { font-weight:var(--font-w-m); }
-
     .col-row.mo thead { position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); }
     .col-row.mo thead + tbody tr:first-child  { border-top:1px solid var(--color-2); }
     .col-row.mo th, .col-row.mo td { border-bottom:0; border-left:0; font-size:var(--font14); }
     .col-row.mo th { border-left:0; }
-    .col-row.mo tbody tr { 
-        display:grid; padding:0 0;
-        grid-template-columns: 135px auto;
-        grid-template-areas:
-        "left right"
-        "left right2";
-        align-items:start;
-        position:relative;
-        border-bottom:var(--table-border);
-    }
+    .col-row.mo tbody tr { display:grid; padding:0 0; grid-template-columns: 135px auto; grid-template-areas: "left right" "left right2"; align-items:start; position:relative; border-bottom:var(--table-border); }
     .col-row.mo tbody th[scope="row"] {  display:flex; align-items:center; justify-content:center; grid-area:left; height:100%; background-color:var(--table-th) !important; }
     .col-row.mo tbody td { text-align:left; word-break:break-word; text-align:center; }
     .col-row.mo tbody td:nth-of-type(1) { grid-area:right; padding:10px 12px 3px; }
     .col-row.mo tbody td:nth-of-type(2) { grid-area:right2; padding:3px 12px 10px; }
     .col-row.mo colgroup { display:none; } 
 
-    .caption { padding-bottom:18px; font-size:var(--font14); }
     .caption.total { display:none; }
     
-    /**별첨이 있을경우 **/
     .mo-appendix { border-top:0; }
     .mo-appendix colgroup{ display:none; }
     .mo-appendix thead, .mo-appendix thead tr { display:flex; gap:16px; justify-content:flex-end; }
@@ -143,7 +138,6 @@ thead th.success, tbody th.success { background-color:var(--primary); color: var
     .mo-appendix tbody tr {display: grid; grid-template-columns: 1fr;}
     .mo-appendix tbody tr th.th-t {border-right: none; background-color: var(--table-th); font-weight: var(--font-w-m);}
 
-    /* 공지사항 리스트 + result 클래스로 스타일링 추가 */
     .mo-list colgroup,
     .mo-list thead,
     .mo-list tbody .num,
@@ -166,15 +160,15 @@ thead th.success, tbody th.success { background-color:var(--primary); color: var
     .mo-list.result tbody tr td:first-of-type::before {content: '[';}
     .mo-list.result tbody tr td:first-of-type::after {content: ']';}
 
-    /* date 항목 추가 */
     .mo-list tbody tr td.date:only-of-type,
     .mo-list tbody tr td.date + td.date {margin-right: 10px;}
     .mo-list tbody tr td.date + td.date::before {content: "~"; margin: 0 4px 0 0;}
-    /* 조회결과 없음 */
+
     table:has(.no-results) tbody tr td { display:block; }
     .no-results { padding-top:98px; border:0; }
     .no-results p { padding-top:86px; min-height:200px; font-size:var(--font20); background-size:80px 66px;}
-    /* 완료 */
+    
     .completed { padding:55px 0 65px; border:0; }
     .completed p {font-size: var(--font20); font-weight: var(--font-w-m);}
 }
+*/

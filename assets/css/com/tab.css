@@ -45,6 +45,11 @@ fieldset span.form-label { display:inline-block; margin-bottom:16px; font-size:v
 .tab-content > .form-wrap > .form-group > .flex-row,
 .tab-content > .form-wrap > .form-group > .flex-row > div { display:flex; gap:10px; }
 
+.anchor-list { margin:0 auto; max-width:1200px; width:100%; }
+.finance .anchor-list.fixed { position:fixed; top:97px; z-index:11; padding:30px 0; background-color:var(--white); }
+.anchor-list .btn-group { display:flex; width:100%; }
+.anchor-list .btn-group button { display:inline-block; padding:8px; width:100%; border:2px solid #DFE1E8;  border-radius:3px; background-color:var(--color-f8); font-size:var(--font22); font-weight:var(--font-w-m); color:var(--color-6); text-align:center; line-height:45px; }
+.anchor-list .btn-group button.active { border:2px solid var(--primary); background-color:var(--white); font-weight:var(--font-w-b); color:var(--primary); }
 @media (max-width: 767px) {
   .tab-container {
     --tab-height: 40px;

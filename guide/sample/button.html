@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="../../assets/css/com/button.css" />
     <link rel="stylesheet" href="../../assets/css/com/tab.css" />
     <link rel="stylesheet" href="../../assets/css/com/table.css" />
-    <link rel="stylesheet" href="../../assets/css/com/content.css" />
+<!--     <link rel="stylesheet" href="../../assets/css/com/content.css" /> -->
     <link rel="stylesheet" href="../css/sample.css" />
     
     <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
@@ -65,7 +65,7 @@
                             <div class="bottom-container">
                                 <div class="btn-content cta">
                                     <div class="button-group">
-                                        <a href="javascript:void(0);" class="btn-primary" data-modal-open="modal">알럿창 기본</a>
+                                        <!-- <a href="javascript:void(0);" class="btn-primary" data-modal-open="modal">알럿창 기본</a> -->
                                         <a href="javascript:void(0);" class="btn-secondary">취소</a>
                                         <a href="javascript:void(0);" class="btn-primary">확인</a>
                                     </div>
@@ -97,6 +97,8 @@
                         <h3>Popup Button</h3>
                         <div>
                             <p>파일을 첨부하기 위해 사용하는 버튼이다. 사용자가 클릭하면 파일 선택 창이 열리며, 선택된 파일은 화면에 표시된다. <br />텍스트와 아이콘을 함께 배치하여 직관적으로 기능을 전달한다.</p>
+
+                            <p style="margin-top: 20px; font-weight: 700;">버튼을 하나만 썼을 때 예시</p>
                             <div class="button-content">
 								<div class="button-wrap">
 									<button type="button" class="btn-pop-secondary" data-popup-close="modal">검색</button>
@@ -108,6 +110,7 @@
 								</div>
 							</div>
 
+                            <p style="margin-top: 20px; font-weight: 700;">버튼을 두개 이상 썼을 때 예시</p>
                             <div class="button-content">
 								<div class="button-wrap popup">
 									<button type="button" class="btn-pop-secondary" data-popup-close="modal">검색</button>
@@ -116,9 +119,50 @@
 							</div>
                         </div>
                     </div>
+                    <div class="tit-wrap">
+                        <h3>link Button</h3>
+                        <div>
+                            <p>링크 버튼 관련 왼쪽 배경 (배경을 변수 처리 해두고 nth-of-type 이용하여 배경만 바꾸기)</p>
+                            <p>button.css 140줄 참고</p>
+                            <p style="margin-top: 20px; font-weight: 700;">버튼 한개씩</p>
+                            <div class="button-content">
+                                <div class="btn-group w50 link1">
+                                    <a href="javascript:void(0);" class="btn-link"><span>오토플러스㈜ <span>바로가기</span><span class="sr-only">새 창</span></span></a>
+                                </div>
+                            </div>
+                            <p style="margin-top: 20px; font-weight: 700;">버튼 두개씩</p>
+                            <div class="button-content">
+                                <div class="btn-group w50 link2">
+                                    <a href="javascript:void(0);" class="btn-link"><span>오토플러스㈜ <span>바로가기</span><span class="sr-only">새 창</span></span></a>
+                                    <a href="javascript:void(0);" class="btn-link"><span>㈜에이원오토 <span>바로가기</span><span class="sr-only">새 창</span></span></a>
+                                    <a href="javascript:void(0);" class="btn-link"><span>㈜에스아이그룹 <span>바로가기</span><span class="sr-only">새 창</span></span></a>
+                                    <a href="javascript:void(0);" class="btn-link"><span>주식회사 카멘토 <span>바로가기</span><span class="sr-only">새 창</span></span></a>
+                                    <a href="javascript:void(0);" class="btn-link"><span>주식회사 씨에스카 <span>바로가기</span><span class="sr-only">새 창</span></span></a>
+                                    <a href="javascript:void(0);" class="btn-link"><span>주식회사 성문네트웍스 <span>바로가기</span><span class="sr-only">새 창</span></span></a>
+                                    <a href="javascript:void(0);" class="btn-link"><span>㈜슈어카 <span>바로가기</span><span class="sr-only">새 창</span></span></a>
+                                    <a href="javascript:void(0);" class="btn-link"><span>스마트다이렉트카 <span>바로가기</span><span class="sr-only">새 창</span></span></a>
+                                    <a href="javascript:void(0);" class="btn-link"><span>주식회사 카베이 <span>바로가기</span><span class="sr-only">새 창</span></span></a>
+                                    <a href="javascript:void(0);" class="btn-link"><span>주식회사 시현신차장기렌터카 <span>바로가기</span><span class="sr-only">새 창</span></span></a>
+                                    <a href="javascript:void(0);" class="btn-link"><span>㈜겟차 <span>바로가기</span><span class="sr-only">새 창</span></span></a>
+                                    <a href="javascript:void(0);" class="btn-link"><span>㈜스타오토모빌 <span>바로가기</span><span class="sr-only">새 창</span></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tit-wrap">
+                        <h3>Top button</h3>
+                        <div>
+                            <p>화면 상단으로 가게 하는 버튼, footer에 사용 권장, 구조만 똑같이 하고 css는 변경 (button.css : position 변경)</p>
+
+                            <div id="scrollTop" class="on" style="position:relative; right:auto; bottom:auto; margin-top:20px; z-index:1;">
+                                <button type="button" class="scrollUpBtn">탑버튼</button>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
                 <!--s: 알럿모음-->
-                <section class="modal-container">
+                <!-- <section class="modal-container">
                     <div id="modal" class="layerPopup modal">
                         <div class="pop-content alert">
                             <div class="pop-body">
@@ -131,7 +175,7 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> -->
                 <!--e: 알럿모음-->
             </main>
         </div>
