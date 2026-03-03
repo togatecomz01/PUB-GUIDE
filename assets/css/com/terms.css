@@ -19,3 +19,11 @@ ul.check-box.terms li .modal { position:absolute; top:50%; right:20px; transform
 /* 약관동의 인포 */
 .form-content:has(.terms) .info-list .m-dot li { margin-top:18px; font-size:var(--font18); color:var(--color-6); }
 .form-content:has(.terms) .info-list .m-dot li::before { content: "·"; margin-right: 5px; }
+
+/*---------------------------------------------
+	#미디어쿼리
+---------------------------------------------*/
+@media (max-width:767px) {
+    .terms li.check-all-area { padding:20px 18px 18px 14px; }
+    .terms li { padding:14px 18px 14px 14px; }
+}

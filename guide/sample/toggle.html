@@ -25,12 +25,10 @@
     <link rel="stylesheet" href="../../assets/css/com/style.css" />
     <link rel="stylesheet" href="../../assets/css/com/fonts.css" />
     <link rel="stylesheet" href="../../assets/css/com/layout.css" />
-    <link rel="stylesheet" href="../../assets/css/com/nav.css" />
     <link rel="stylesheet" href="../../assets/css/com/input.css" />
     <link rel="stylesheet" href="../../assets/css/com/button.css" />
     <link rel="stylesheet" href="../../assets/css/com/tab.css" />
     <link rel="stylesheet" href="../../assets/css/com/table.css" />
-    <link rel="stylesheet" href="../../assets/css/com/content.css" />
     <link rel="stylesheet" href="../css/sample.css" />
     
     <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
@@ -93,24 +91,80 @@
                                 <div class="form-content">
                                     <p style="margin-bottom:10px;">기본 체크박스</p>
                                     <div class="form-wrap">
-                                        <fieldset>
-                                            <legend>기본 라디오 박스</legend>
-                                            <label class="radio">
-                                              <input type="radio" name="row2-active" value="" checked>
-                                              <span>Check Box ON</span>
-                                            </label>
+                                        <div class="form-group">
+                                            <fieldset>
+                                                <legend>기본 라디오 박스</legend>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active" value="" checked>
+                                                    <span>Check Box ON</span>
+                                                </label>
+    
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active" value="">
+                                                    <span>Check Box OFF</span>
+                                                </label>
 
-                                            <label class="radio">
-                                                <input type="radio" name="row2-active" value="">
-                                                <span>Check Box OFF</span>
-                                            </label>
+                                                <label class="radio">
+                                                    <input type="radio" name="row2-active" value="" disabled>
+                                                    <span>Check Box Disable-checked</span>
+                                                </label>
+                                            </fieldset>
+                                        </div>
+                                        <div class="form-group">
+                                            <fieldset>
+                                                <legend>기본 라디오 박스</legend>
 
+                                                <div class="radio-item style2">
+                                                    <input type="radio" name="row3-active" id="row2_active_1" value="" checked>
+                                                    <label for="row2_active_1" class="radio">
+                                                        <span>Check Box ON</span>
+                                                    </label>
+                                                </div>
+
+                                                <div class="radio-item style2">
+                                                    <input type="radio" name="row3-active" id="row2_active_2" value="">
+                                                    <label for="row2_active_2" class="radio">
+                                                        <span>Check Box OFF</span>
+                                                    </label>
+                                                </div>
+
+                                                <div class="radio-item style2">
+                                                    <input type="radio" name="row3-active" id="row2_active_3" value="" disabled>
+                                                    <label for="row2_active_3" class="radio">
+                                                        <span>Check Box Disable-checked</span>
+                                                    </label>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <p style="margin-bottom:10px;">style2</p>
+                                    <div class="form-wrap">
+                                        <div class="form-group r-button">
                                             <label class="radio">
-                                                <input type="radio" name="row2-active" value="" disabled>
-                                                <span>Check Box Disable-checked</span>
+                                                <input type="radio" name="style2" id="style2" value="1" checked="">
+                                                <span>label > input</span>
                                             </label>
-                                          </fieldset>
-                                    </div> 
+                                            <label class="radio">
+                                                <input type="radio" name="style2" id="style2" value="0">
+                                                <span>label > input</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group r-button">
+                                            <div class="radio-item">
+                                                <input type="radio" name="style2-1" id="style2-1" value="1" checked>
+                                                <label for="style2-1" class="radio">
+                                                    <span>input + label</span>
+                                                </label>
+                                            </div>
+
+                                            <div class="radio-item">
+                                                <input type="radio" name="style2-1" id="style2-2" value="0">
+                                                <label for="style2-2" class="radio">
+                                                    <span>input + label</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!--//form-content-->
                             </div>
@@ -121,20 +175,29 @@
                         <div>
                             <div class="form-container">
                                 <div class="form-content">
-                                    <p style="margin-bottom:10px;">기본 토글</p>
                                     <div class="form-wrap">
-                                        <fieldset>
-                                            <legend>기본 토글</legend>
+                                        <div class="form-group">
+                                            <p style="margin-bottom:10px;">기본</p>
                                             <label class="toggle">
-                                              <input type="checkbox" name="row3-active" title="체크" value="" checked>
-                                              <span>선택</span>
+                                                <input type="checkbox" name="row3-active" title="체크" value="" checked>
+                                                <span>선택</span>
                                             </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <p style="margin-bottom:10px;">disabled</p>
                                             <label class="toggle">
-                                                <input type="checkbox" name="row3-active" title="체크" value="">
+                                                <input type="checkbox" name="row3-active" title="체크" value="" disabled>
                                                 <span>선택안함</span>
-                                              </label>
-                                          </fieldset>
-                                    </div> 
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <p style="margin-bottom:10px;">텍스트</p>
+                                            <label class="toggle style2">
+                                                <input type="checkbox" name="row3-active" id="fontSizeNormal" title="텍스트" value="">
+                                                <span>텍스트</span>
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!--//form-content-->
                             </div>
