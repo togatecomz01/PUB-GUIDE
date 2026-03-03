@@ -168,10 +168,13 @@ label input[type="radio"]:checked { border:7px solid var(--form-checked);  }
 label input[type="radio"]:disabled { border:7px solid var(--form-check-dissbled); }
 
 /* style2 */
-.form-group .radio-item.style2 { position:relative; display:inline-block; }
+.form-group .radio-item.style2,
+.form-group .check-item.style2 { position:relative; display:inline-block; }
+.check-item.style2 input[type="checkbox"],
 .radio-item.style2 input[type="radio"] { position:absolute; opacity:0; width:0; height:0; }
-.radio-item.style2 label.radio { padding-left:40px; }
-.radio-item.style2 label.radio::before { content:""; position:absolute; top:50%; transform:translateY(-50%); left:0; display:inline-block; width:var(--radio-s2); height:var(--radio-s2); border-radius:50%; background:var(--white); overflow:hidden; }
+.radio-item.style2 input[type="radio"] + label.radio,
+.check-item.style2 input[type="checkbox"] + label.check { padding-left:40px; }
+.radio-item.style2 input[type="radio"] +  label.radio::before { content:""; position:absolute; top:50%; transform:translateY(-50%); left:0; display:inline-block; width:var(--radio-s2); height:var(--radio-s2); border-radius:50%; background:var(--white); overflow:hidden; }
 .radio-item.style2 input[type="radio"]:checked + label.radio::before,
 .radio-item.style2 input[type="radio"]:disabled + label.radio::before { width:var(--radio-s-s2); height:var(--radio-s-s2); }
 
@@ -184,11 +187,25 @@ label input[type="checkbox"]::before,
 .terms input[type="checkbox"]::before { content:""; display:block; width:100%; height:100%; background:var(--white); mask-image:var(--form-checkbox); mask-position:center; mask-repeat:no-repeat; mask-size:15px auto; --webkit-mask-image:var(--form-checkbox); --webkit-mask-position:center; --webkit-mask-repeat:no-repeat; --webkit-mask-size:15px auto; }
 
 label input[type="checkbox"]:not(:checked)::before,
-.terms input[type="checkbox"]:not(:checked)::before { mask-image:none;  -webkit-mask-image:none; }
+.terms input[type="checkbox"]:not(:checked)::before,
+.check-item.style2 input[type="checkbox"]:not(:checked) + label.check::before { mask-image:none;  -webkit-mask-image:none; }
 label input[type="checkbox"]:checked,
-.terms input[type="checkbox"]:checked { background:var(--form-checked); }
+.terms input[type="checkbox"]:checked,
+.check-item.style2 input[type="checkbox"]:checked + label.check::before  { background:var(--form-checked); }
 label input[type="checkbox"]:disabled,
 .terms input[type="checkbox"]:disabled { background:var(--form-check-dissbled); }
+
+/* style2 */
+.check-item.style2 input[type="checkbox"] + label.check { padding-left:40px; }
+.check-item.style2 input[type="checkbox"] + label.check::before,
+.check-item.style2 input[type="checkbox"]:checked + label.check::after { content: ""; position: absolute; top: 50%; transform: translateY(-50%); left: 0; display: inline-block; border:1px solid var(--form-checkbox-border); overflow:hidden; border-radius:50%; }
+.check-item.style2 input[type="checkbox"] + label.check::before { width:var(--check-s); height:var(--check-s); border: 1px solid #BBBBBB; background-color: #FFFFFF; }
+.check-item.style2 input[type="checkbox"]:checked + label.check::before { width:var(--check-s); height:var(--check-s); background:var(--form-checked); }
+.check-item.style2 input[type="checkbox"]:checked + label.check::after { width:var(--check-s); height:var(--check-s); background:var(--white); mask-image:var(--form-checkbox); mask-position:center; mask-repeat:no-repeat; mask-size:15px auto; --webkit-mask-image:var(--form-checkbox); --webkit-mask-position:center; --webkit-mask-repeat:no-repeat; --webkit-mask-size:15px auto; }
+.check-item.style2 input[type="checkbox"]:disabled + label.check::before { background:var(--form-check-dissbled); }
+
+
+
 
 /** textxarea 글자수 **/
 .textarea-wrap { position:relative; padding-bottom:0; }
@@ -377,7 +394,8 @@ input[type="date"] + button { position:absolute; right:10px; top:50%; transform:
 
     /**label**/
     .form-content label { font-size:var(--font14); font-weight:var(--font-w-m); color:var(--color-2); }
-    label input[type="checkbox"]::before, .terms input[type="checkbox"]::before { mask-size:10px; --webkit-mask-size: 10px auto; }
+    label input[type="checkbox"]::before, .terms input[type="checkbox"]::before,
+    .check-item.style2 input[type="checkbox"]:checked + label.check::after { mask-size:10px; --webkit-mask-size: 10px auto; }
     label.check,
     label.radio { gap:6px; }
     label input[type="radio"]:checked,
