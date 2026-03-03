@@ -87,18 +87,12 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 .btn-group.w50 > a:first-of-type,
 .btn-group.w50 > a:nth-of-type(2) { margin-top:0; }
 
-.btn-link,
+/* .btn-link, */
 .btn-download { display:inline-flex; align-items:center; justify-content:space-between; gap:10px; min-height:80px; line-height:1.5; padding:0 32px; border-radius:100px; background:var(--btn-download-background); border:var(--btn-download-border); text-align:left; font-size:var(--btn-download-font-size); }
 .btn-download { min-height:60px; }
 .btn-download::after { content:""; display:block; width:24px; height:24px; background-color:var(--color-9); 
   mask-image:var(--ico-download); mask-repeat:no-repeat; mask-size:auto 40px; mask-position:center; -webkit-mask-image:var(--ico-download); -webkit-mask-repeat:no-repeat; -webkit-mask-size:17.333px auto; -webkit-mask-position:center; 
 }
-
-.btn-link::after { content:""; display:block; width:24px; height:24px; background-color:var(--color-9); 
-  mask-image:var(--ico-link); mask-repeat:no-repeat; mask-size:auto 40px; mask-position:center; -webkit-mask-image:var(--ico-link); -webkit-mask-repeat:no-repeat; -webkit-mask-size:19px auto; -webkit-mask-position:center; 
-}
-.btn-link:focus-visible::after,
-.btn-link:hover::after { background-color:var(--primary); }  
 
 /** CTA 01 **/
 .btn-content.cta .button-group { display:flex; gap:24px; justify-content:center; width:100%; text-align:center; }
@@ -160,6 +154,18 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
   [백업 구역] - 당장 사용하지 않으므로 일단 주석 처리 (나중에 필요하면 살리거나 삭제 예정)
    ========================================================= */
 /*
+.btn-link::after { content:""; display:block; width:24px; height:24px; background-color:var(--color-9); 
+  mask-image:var(--ico-link); mask-repeat:no-repeat; mask-size:auto 40px; mask-position:center; -webkit-mask-image:var(--ico-link); -webkit-mask-repeat:no-repeat; -webkit-mask-size:19px auto; -webkit-mask-position:center; 
+}
+.btn-link:focus-visible::after,
+.btn-link:hover::after { background-color:var(--primary); }  
+
+.btn-group.link1 .btn-link:first-of-type {  background-image:var(--logo-cst-01); }
+.btn-group.link2 .btn-link:first-of-type {  background-image:var(--logo-cst-02); }
+.btn-group.link2 .btn-link:nth-of-type(2) { background-image:var(--logo-cst-03); }
+.btn-group.link2 .btn-link:nth-of-type(3) { background-image:var(--logo-cst-04); }
+.btn-group.link2 .btn-link:nth-of-type(4) { background-image:var(--logo-cst-05); }
+
 .btn-text { color:var(--btn-text); text-decoration:underline;  }
 .btn-text.inline { display:inline; text-decoration:none; }
 
