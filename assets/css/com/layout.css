@@ -73,7 +73,7 @@ main.contentWrap img { max-width:100%; }
 #headerWrap:has(.menu-item.on) { background-color:var(--white); }
 .gnb{ display:flex; justify-content:space-between; align-items:center; margin:0 auto; max-width:1400px; width:100%; background:var(--white); }
 .gnb h1{ display:block; width:137px; height:36px; font-size:0; }
-.gnb h1 a{ display:block; width:100%; height:100%; text-indent:-9999px; background:url("../../images/com/svg/topLogo.svg") no-repeat; background-size:100%; }
+.gnb h1 a{ display:block; width:100%; height:100%; text-indent:-9999px; background:url("../../images/com/svg/topLogo.svg") no-repeat; background-size:100%; background-position-y: center; }
 .bodyWrap { padding-top:88px; }
 
 /*---------------------------------------------
@@ -119,7 +119,6 @@ main.contentWrap > .page-container { padding-top:42px; margin:0 auto; max-width:
 .page-container > [class*="-content"] > .group >[class*="-group"]:first-child,
 .page-container > [class*="-content"] >[class*="-group"]:first-child { margin-top:0; }
 .page-container > [class*="-content"] > .group > [class*="-group"]:last-child { margin-bottom:0; }
-.page-container > div + div { padding-top:52px; border-top:1px solid var(--color-d); }
 .page-container > div.tab-container + div { padding-top:0; }
 
 /**성공, 실패**/

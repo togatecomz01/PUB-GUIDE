@@ -64,20 +64,65 @@
                 <nav class="location-container">
                     <ol class="breadcrumb">
                         <li><span class="home">홈</span></li>
-                        <li><span>MY MG</span></li>
-                        <li><span>이용현황</span></li>
-                        <li><span>이용상품내역</span></li>
+                        <li><span>depth1</span></li>
+                        <li><span>depth2</span></li>
+                        <li><span>depth3</span></li>
                     </ol>
                 </nav>
                 <section class="visual-container">
                     <h2>타이틀</h2>
                 </section>
                 <section class="page-container">
+                    <div class="text-content">
+                        <h3>서브 타이틀</h3>
+                        <p>서브 타이틀 보조문구</p>
+                    </div>
+                    <div class="tab-container jsTab">
+                        <nav class="tab-list depth1">
+                            <div class="btn-group">
+                                <button type="button" class="tab-item active" data-tab="tab1" aria-selected="true">탭메뉴1</button>
+                                <button type="button" class="tab-item" data-tab="tab2" aria-selected="false">탭메뉴2</button>
+                            </div>
+                        </nav>
+                        <div class="tab-content">
+                            <div class="tab-content">
+                                <div id="tab1" class="tab-panel active">
+                                    <div class="form-content">
+                                        <p style="margin-bottom:10px;">기본 체크박스</p>
+                                        <div class="form-wrap">
+                                            <div class="form-group">
+                                                <fieldset>
+                                                    <legend>기본 체크박스</legend>
+                                                    <label class="check">
+                                                        <input type="checkbox" name="row1-active" value="" checked>
+                                                        <span>Check Box ON</span>
+                                                    </label>
+        
+                                                    <label class="check">
+                                                        <input type="checkbox" name="row1-active" value="">
+                                                        <span>Check Box OFF</span>
+                                                    </label>
+        
+                                                    <label class="check">
+                                                        <input type="checkbox" name="row1-active" value="" checked disabled>
+                                                        <span>Check Box Disable-checked</span>
+                                                    </label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab2" class="tab-panel">
+                                    <p>탭1-2 내용</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <section class="bottom-container">
                     <div class="btn-content cta">
                         <div class="button-group">
-                            <a href="javascript:void(0);" class="btn-primary">출력</a>
+                            <a href="javascript:void(0);" class="btn-primary">확인</a>
                         </div>
                     </div>
                 </section>
