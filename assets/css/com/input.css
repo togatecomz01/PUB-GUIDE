@@ -54,6 +54,7 @@ label.button:has(:focus-visible) { outline:2px solid var(--form-active); outline
 ============================================= */
 label,
 .label-tit{ display:block; font-size:var(--form-label-font-size); color:var(--form-label); font-weight:var(--font-label-weight); }
+.label-tit { margin-bottom:16px; }
 th label { font-size:var(--th-form-label-font-size); font-weight:initial; }
 
 /* =============================================

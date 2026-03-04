@@ -121,6 +121,9 @@ main.contentWrap > .page-container { padding-top:42px; margin:0 auto; max-width:
 .page-container > [class*="-content"] > .group > [class*="-group"]:last-child { margin-bottom:0; }
 .page-container > div.tab-container + div { padding-top:0; }
 
+[class*="-content"] + div { margin-top:54px; }
+[class*="-content"] > [class*="-group"] + div { margin-top:32px; }
+
 /**성공, 실패**/
 .success { color: var(--success) !important; }
 .error { color:var(--failure) !important; }
