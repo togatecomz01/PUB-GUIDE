@@ -50,28 +50,52 @@
 
 # UI Components (기본 공통 컴포넌트)
 - **Alert**: 알림창 및 경고 메시지 UI 컴포넌트
-  - [guide/sample/alert.html](guide/sample/alert.html)
+<details>
+<summary>이미지</summary>
+<img width="1895" height="917" alt="image" src="https://github.com/user-attachments/assets/44212c56-1a8d-4006-a9d0-08697e81c1ca" />
+</details>
 
 - **Button**: 다양한 스타일의 버튼 컴포넌트
-  - [guide/sample/button.html](guide/sample/button.html)
+<details>
+<summary>이미지</summary>
+<img width="1326" height="1708" alt="image" src="https://github.com/user-attachments/assets/7216ae12-0027-425b-9409-eb9f6f9b9a50" />
+</details>
 
 - **Input**: 입력 필드 및 폼 컴포넌트
-  - [guide/sample/input.html](guide/sample/input.html)
+<details>
+<summary>이미지</summary>
+<img width="1291" height="2410" alt="image" src="https://github.com/user-attachments/assets/366cdf15-c3b3-448a-b46b-820a4bc607f5" />
+</details>
 
 - **Popup**: 모달 및 팝업 윈도우 컴포넌트
-  - [guide/sample/popup.html](guide/sample/popup.html)
+<details>
+<summary>이미지</summary>
+<img width="1893" height="917" alt="image" src="https://github.com/user-attachments/assets/7dd3896a-7ac0-442f-9928-be6ced3f1b73" />
+</details>
 
 - **Tab**: 탭 네비게이션 컴포넌트
-  - [guide/sample/tab.html](guide/sample/tab.html)
+<details>
+<summary>이미지</summary>
+<img width="1297" height="1222" alt="image" src="https://github.com/user-attachments/assets/d5a5ba6e-71f4-4c0d-b16b-2b6f89bd3fb3" />
+</details>
 
 - **Table**: 데이터 테이블 컴포넌트
-  - [guide/sample/table.html](guide/sample/table.html)
+<details>
+<summary>이미지</summary>
+<img width="1266" height="3018" alt="image" src="https://github.com/user-attachments/assets/22f423bd-bce1-48fa-942e-23b414d1de0d" />
+</details>
 
 - **Toggle**: 토글 스위치 컴포넌트
-  - [guide/sample/toggle.html](guide/sample/toggle.html)
+<details>
+<summary>이미지</summary>
+<img width="1295" height="1067" alt="image" src="https://github.com/user-attachments/assets/38db6ace-f354-4452-8856-fcd778554d41" />
+</details>
 
 - **Terms**: 약관 동의 UI 컴포넌트
-  - [guide/sample/terms.html](guide/sample/terms.html)
+<details>
+<summary>이미지</summary>
+<img width="1289" height="616" alt="image" src="https://github.com/user-attachments/assets/1796c6dc-b5bd-47cd-93ea-618d326049d5" />
+</details>
 
 <br/>
 <br/>
@@ -101,66 +125,59 @@
 
 ```plaintext
 PUB-GUIDE/
-├── index.html                           # 메인 HTML 파일
-├── README.md                            # 프로젝트 개요 및 사용법
+├── index.html                           # worklist
 ├── assets/                              # 정적 파일 및 라이브러리
 │   ├── css/                             # 스타일시트
 │   │   ├── swiper-bundle.min.css        # Swiper 라이브러리 CSS
 │   │   └── com/                         # 공통 컴포넌트 CSS
-│   │       ├── default.css              # 기본 초기화 및 베이스 스타일
-│   │       ├── common.css               # 공통 스타일 정의
-│   │       ├── fonts.css                # 폰트 스타일
-│   │       ├── layout.css               # 레이아웃 스타일
-│   │       ├── button.css               # 버튼 스타일
-│   │       ├── input.css                # 입력 필드 스타일
-│   │       ├── nav.css                  # 네비게이션 스타일
-│   │       ├── style.css                # 메인 스타일
-│   │       ├── tab.css                  # 탭 스타일
-│   │       ├── table.css                # 테이블 스타일
-│   │       ├── ie.css                   # IE 호환성 스타일
-│   │       └── ui-util.css              # UI 유틸 스타일
+│   │       ├── button.css               
+│   │       ├── common.css               
+│   │       ├── default.css              
+│   │       ├── fonts.css                
+│   │       ├── ie.css                   
+│   │       ├── input.css                
+│   │       ├── layout.css               
+│   │       ├── nav.css                  
+│   │       ├── style.css                
+│   │       ├── tab.css                  
+│   │       ├── table.css                
+│   │       └── ui-util.css              
 │   ├── fonts/                           # 폰트 파일
 │   ├── images/                          # 이미지 파일
 │   │   └── com/                         # 공통 이미지
 │   │       ├── ie11/                    # IE11 호환 이미지
 │   │       └── svg/                     # SVG 파일
 │   └── js/                              # 자바스크립트 파일
-│       ├── include.js                   # 공통 include 처리
-│       ├── lib/                         # 외부 라이브러리
+│       ├── include.js                   # 인클루드 로직
+│       ├── lib/                         # 라이브러리
 │       │   ├── jquery-1.12.4.js         # jQuery 라이브러리
 │       │   ├── jquery-ui.min.js         # jQuery UI 라이브러리
 │       │   ├── swiper-bundle.min.js     # Swiper 라이브러리
 │       │   └── ui_plugin.js             # UI 플러그인
 │       └── ui/                          # UI 스크립트
-│           ├── ui-util.js               # UI 유틸리티
+│           ├── ui-util.js               
 │           └── com/                     # 공통 UI 스크립트
-│               ├── accordion.js         # 아코디언
-│               ├── datepicker.js        # 날짜 선택기
-│               ├── fake_select.js       # 커스텀 셀렉트
-│               ├── finance.js           # 재무 관련 스크립트
-│               ├── input.js             # 입력 필드 스크립트
-│               ├── layout.js            # 레이아웃 스크립트
-│               ├── nav.js               # 네비게이션 스크립트
-│               ├── popup.js             # 팝업 스크립트
-│               ├── tab.js               # 탭 스크립트
-│               ├── table.js             # 테이블 스크립트
-│               └── terms.js             # 약관 스크립트
-├── guide/                               # 가이드 및 샘플
-│   ├── css/                             # 가이드 스타일
-│   │   ├── pub-worklist.css             # 작업 리스트 스타일
-│   │   └── sample.css                   # 샘플 스타일
-│   ├── js/                              # 가이드 자바스크립트
-│   │   ├── jquery-1.11.3.min.js         # jQuery 라이브러리
-│   │   └── jquery.form.min.js           # jQuery Form 라이브러리
-│   └── sample/                          # HTML 샘플 파일
-│       ├── alert.html                   # 알림 샘플
-│       ├── button.html                  # 버튼 샘플
-│       ├── input.html                   # 입력 필드 샘플
-│       ├── popup.html                   # 팝업 샘플
-│       ├── tab.html                     # 탭 샘플
-│       ├── table.html                   # 테이블 샘플
-│       ├── terms.html                   # 약관 샘플
-│       ├── toggle.html                  # 토글 샘플
+│               ├── accordion.js         
+│               ├── datepicker.js        
+│               ├── fake_select.js       
+│               ├── finance.js           
+│               ├── input.js             
+│               ├── layout.js            
+│               ├── nav.js               
+│               ├── popup.js             
+│               ├── popup_1.js           
+│               ├── popup_new.js         
+│               ├── tab.js               
+│               ├── table.js             
+│               └── terms.js             
+├── guide/                               # worklist 및 예시
+│   ├── css/                             
+│   │   ├── pub-worklist.css             # worklist 스타일
+│   │   └── sample.css                   # 예시 스타일
+│   ├── js/                              
+│   │   ├── jquery-1.11.3.min.js         
+│   │   └── jquery.form.min.js           
+│   └── sample/                          # HTML 예시 파일
 └── views/                               # 페이지 뷰
     └── COMMON/                          # 공통 컴포넌트
         ├── footer.html                  # 푸터
