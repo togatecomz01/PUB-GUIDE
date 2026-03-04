@@ -6,7 +6,7 @@
 <br/>
 
 # Browser Support
-<p>금융권 환경을 고려하여 다음 브라우저를 지원합니다.</p>
+<p>금융권 환경을 고려하여 다음 브라우저를 지원 예정</p>
 
 - IE11
 
@@ -28,16 +28,16 @@
 
 <br/>
 <br/>
-
+<!-- 
 # Technology Stack (기술 스택)
 ## Language
 |  |  |
 |-----------------|-----------------|
 | HTML5    |<img src="https://github.com/user-attachments/assets/2e122e74-a28b-4ce7-aff6-382959216d31" alt="HTML5" width="100">| 
 | CSS3    |   <img src="https://github.com/user-attachments/assets/c531b03d-55a3-40bf-9195-9ff8c4688f13" alt="CSS3" width="100">|
-| Javascript    |  <img src="https://github.com/user-attachments/assets/4a7d7074-8c71-48b4-8652-7431477669d1" alt="Javascript" width="100"> | 
+| Javascript    |  <img src="https://github.com/user-attachments/assets/4a7d7074-8c71-48b4-8652-7431477669d1" alt="Javascript" width="100"> |  -->
 
-<br/>
+<!-- <br/>
 
 ## Frotend
 |  |  |  |
@@ -46,7 +46,7 @@
 | jquery    |  <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jQuery&logoColor=white" alt="jquery" width="100"> |1.12.4|
 
 <br/>
-<br/>
+<br/> -->
 
 # UI Components (기본 공통 컴포넌트)
 - **Alert**: 알림창 및 경고 메시지 UI 컴포넌트
