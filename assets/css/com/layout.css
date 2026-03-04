@@ -278,6 +278,8 @@ h3.rfrnc::before { content:"※ "; display:inline; position:relative; left:inher
 .form-content > .form-wrap > .form-group .mo-column .flex-row > div { flex:1; }
 .form-content > .form-wrap > .form-group .mo-column .flex-row .se-select,
 .form-content > .form-wrap > .form-group .mo-column > .col:last-of-type { flex:0 0 152px; }
+.form-content > .form-wrap.full { flex-wrap:wrap; flex-direction: column; }
+.form-content > .form-wrap.full .form-group { width:100%; }
 
 /**팝업 검색 폼**/
 .pop-content .form-wrap.search-form > .group .form-group { display:grid; grid-template-columns:100px 1fr; gap:0 24px; align-items:center; width:100%; }
