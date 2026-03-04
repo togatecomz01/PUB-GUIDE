@@ -9,8 +9,8 @@ body{
     --th-form-label-font-size:1rem;
     --font-label-weight:var(--font-w-m);
     --form-bg:var(--white);
-    --from-font-color:var(--color-2);
-    --from-placeholder-color:var(--color-6);
+    --form-font-color:var(--color-2);
+    --form-placeholder-color:var(--color-6);
     --form-board:var(--color-d);
     --form-height:50px;
     --form-padding:0 16px;
@@ -24,7 +24,7 @@ body{
     --form-checkbox:url("../../images/com/svg/ico_form_check.svg");
     --form-checked:#0098CB;
     --form-check-dissbled:#9CB1C4;
-    --fonm-file-button:#F6F7FB;
+    --form-file-button:#F6F7FB;
     --form-checkbox-border:#8D8D8D;
     --form-radio-bg:var(--color-f7);
     --form-date-ico:url("../../images/com/svg/ico_date.svg");
@@ -68,8 +68,8 @@ input[type="search"],
 input[type="date"],
 input[type="month"],
 input[type="datepicker"],
-select{ width:100%; height:var(--form-height); max-height:var(--form-height); background:var(--form-bg); border: 1px solid var(--form-board); padding:var(--form-padding); color:var(--from-font-color); box-sizing:border-box; -webkit-box-sizing: border-box; }
-textarea { width:100%; border:1px solid var(--form-board); padding:12px 16px; color:var(--from-font-color); font-size:var(--font18); box-sizing:border-box; -webkit-box-sizing: border-box;}
+select{ width:100%; height:var(--form-height); max-height:var(--form-height); background:var(--form-bg); border: 1px solid var(--form-board); padding:var(--form-padding); color:var(--from-font-color); box-sizing:border-box; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+textarea { width:100%; border:1px solid var(--form-board); padding:12px 16px; color:var(--from-font-color); font-size:var(--font18); box-sizing:border-box; }
 
 /** select 커스텀 화살표 **/
 select {  padding-right:54px; -webkit-appearance:none; -moz-appearance:none; appearance:none; background:var(--ico-select) no-repeat right 14px center; line-height:var(--form-height); }
@@ -82,17 +82,17 @@ input.upload { position:absolute; width:1px; height:1px; padding:0; margin:-1px;
 
 /** placeholder **/
 input::placeholder,
-textarea::placeholder { color: var(--from-placeholder-color); }
+textarea::placeholder { color: var(--form-placeholder-color); }
 
 /* Chrome/Safari */
 input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder { color: var(--from-placeholder-color); }
+textarea::-webkit-input-placeholder { color: var(--form-placeholder-color); }
 /* Firefox */
 input::-moz-placeholder,
-textarea::-moz-placeholder { color: var(--from-placeholder-color); opacity: 1; }
+textarea::-moz-placeholder { color: var(--form-placeholder-color); opacity: 1; }
 /* IE11 */
 input:-ms-input-placeholder,
-textarea:-ms-input-placeholder { color: var(--from-placeholder-color); }
+textarea:-ms-input-placeholder { color: var(--form-placeholder-color); }
 
 /* input + clear */
 .ipt-clear { position:relative; display:block; }
@@ -324,7 +324,7 @@ input[type="month"] { appearance:none; -webkit-appearance:none; padding-right:10
 
 /* 커스텀 달력 버튼 */
 input[type="month"]+ button,
-input[type="date"] + button { position:absolute; right:10px; top:50%; transform:translate(0, -50%); z-index:2; display:block; width:24px; height:24px; font-size:0; background-image:var(--form-date-ico); background-size:18px; background-repeat:no-repeat;; background-position:center; }
+input[type="date"] + button { position:absolute; right:10px; top:50%; transform:translate(0, -50%); z-index:2; display:block; width:24px; height:24px; font-size:0; background-image:var(--form-date-ico); background-size:18px; background-repeat:no-repeat; background-position:center; }
 
 /* 달력 열림 상태 */
 .date.is-open,
@@ -443,7 +443,7 @@ ul.check-box.terms li .modal { position:absolute; top:50%; right:20px; transform
     .form-group input[type="month"],
     .form-group input[type="datepicker"],
     .form-group select,
-    .form-group textarea { flex: 1 1 var(--fonm-height); }
+    .form-group textarea { flex: 1 1 var(--form-height); }
 
     /* 검색 버튼 */
     .form-group .search input + button.btn-sch::before { width:24px; height:24px; }
