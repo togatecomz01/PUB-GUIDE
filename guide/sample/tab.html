@@ -99,13 +99,13 @@
                     <button type="button" class="tab-item" data-tab="tab3" aria-selected="false">탭메뉴3</button>
                 </div>
               </nav>
-              <div class="se-select tab-select-mobile" data-view="mo">
+              <!-- <div class="se-select tab-select-mobile" data-view="mo">
                 <select class="tab-select depth1">
                   <option value="tab1" selected>탭1-1</option>
                   <option value="tab2">탭1-2</option>
                   <option value="tab3">탭1-3</option>
                 </select>
-              </div>
+              </div> -->
 
               <div class="tab-content">
                 <div id="tab1" class="tab-panel active">
@@ -153,9 +153,30 @@
               <!--//tab-content-->
             </div>
           </section>
-          <!--//button-content-->
+          
+          <!-- 기존 탭(jsTab)과 분리 -->
+          <section class="select-tab-area"> 
+            <div style="padding: 0 0 20px">
+              <h3>select-tab</h3>
+              <div style="padding: 10px 0 20px; font-size: 14px">
+                <p>셀렉트 박스를 탭처럼 이용하려고 할 때 사용한다.</p>
+              </div>
+              <div class="tab-select-wrap">
+                  <select class="tab-select-common">
+                      <option value="sel-tab1" selected>상품요약</option>
+                      <option value="sel-tab2">상세안내</option>
+                      <option value="sel-tab3">유의사항</option>
+                  </select>
+              </div>
 
-          <div class="anchor-container"> 
+              <div class="tab-content">
+                  <div id="sel-tab1" class="tab-panel active">셀렉트 전용 내용 1</div>
+                  <div id="sel-tab2" class="tab-panel">셀렉트 전용 내용 2</div>
+                  <div id="sel-tab3" class="tab-panel">셀렉트 전용 내용 3</div>
+              </div>
+          </section>
+
+          <!-- <div class="anchor-container"> 
             <div style="padding: 0 0 20px">
                 <h3>Anchor Tab (PC:Scroll / MO:Tab)</h3>
                 <p></p>
@@ -168,7 +189,7 @@
                     <button type="button" data-target="#precautions">유의사항</button>
                 </div>
             </nav>
-        </div>
+          </div> -->
       </main>
 
       <!-- S: footer -->

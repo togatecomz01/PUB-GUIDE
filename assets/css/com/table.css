@@ -35,8 +35,9 @@ table td:first-of-type { border-left:0; }
 
 table tbody th { border-right:var(--table-border); }
 
-table tbody tr:has(td[rowspan]) + tr th:first-of-type,
-table tbody tr:has(td[rowspan]) + tr td:first-of-type { border-left:var(--table-border); }
+/* 현재 상황에서 쓰지 않음, 필요하면 has 말고 따로 클래스 줘서 border 주는 방법이 나을듯 */
+/* table tbody tr:has(td[rowspan]) + tr th:first-of-type,
+table tbody tr:has(td[rowspan]) + tr td:first-of-type { border-left:var(--table-border); } */
 
 /* =========================================================
                     테이블 강조 및 예외 속성
@@ -63,112 +64,3 @@ thead th.success, tbody th.success { background-color:var(--primary); color: var
 
     .caption { padding-bottom:18px; font-size:var(--font14); }
 }
-
-
-/* =========================================================
-    [백업 구역] - 당장 사용하지 않으므로 일단 주석 처리 (나중에 필요하면 살리거나 삭제 예정)
-   ========================================================= */
-/*
-table.list td,
-table.td-l td { border-left:0; }
-table td.title { text-align:left; }
-table.col-row tbody th { background:transparent; font-size:1rem; }
-table.td-al td { text-align:left; }
-
-.table-group + .m-dot { margin-top:-22px; }
-table th.div_sum { background:var(--white); font-weight:var(--font-w-m); border-right:var(--table-border); font-weight:var(--font-w-r);  }
-
-.total { padding-bottom:20px; font-size:var(--font16); font-weight:var(--font-w-r); color:var(--color-6); text-align:left; }
-.total em { color:var(--color-2); font-weight:var(--font-w-b); }
-.total em span { color:var(--primary); }
-.form-content:has(.caption.total) { display:flex; align-items:center; }
-
-.table-content table tfoot tr:only-child,
-.table-content table tfoot tr:last-child { background-color:#EDF9FF; }
-.table-content table tfoot .sum { font-weight:var(--font-w-m); color:var(--white); background-color:#0072BC; }
-
-table:has(.no-results) { border:0; }
-table:has(.no-results) thead { display:none; }
-table:has(.no-results) td { margin:0; padding:0; border:0; }
-.no-results { padding-top:150px; width: 100%; border:var(--table-border); border-radius:8px; }
-.no-results p { padding-top:124px; width:100%; min-height:308px; font-size: var(--font28); font-weight: var(--font-w-m); text-align:center; background: url('../../images/content/no-result.png') no-repeat center top; background-size:120px 100px;}
-
-.completed { padding:100px 0; width: 100%; border:var(--table-border); border-radius:8px; }
-.completed p { padding-top:124px; width:100%;  font-size: var(--font28); font-weight: var(--font-w-b); text-align:center; background: url('../../images/content/contrackComp.png') no-repeat center top; background-size:120px 100px;}
-.completed span {display: block; margin-top: 16px; width: 100%; font-weight: var(--font-w-r); color: var(--color-45); text-align: center;}
-.completed + .rfrnc { margin-top:20px; }
-.completed + .rfrnc li + li { margin-top:12px; }
-
-.mo-list tbody tr td.title,
-.mo-list tbody tr td.title a { max-width:95%; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; text-align:left; }
-.mo-list tbody tr td.title span { display:inline-block; max-width:400px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
-
-table.round { border:var(--table-border); border-bottom:0; border-collapse:separate; border-radius:16px; overflow:hidden; }
-
-@media (max-width:1200px){
-    .table-content:has(.mo-s) table { table-layout:auto; }
-    .table-content:has(.mo-s.mo-list) table { table-layout:fixed; }
-    .table-content:has(.table-group) { overflow-x:hidden; }
-    .table-content:has(.table-group) .table-group { overflow-x:auto; }
-}
-
-@media (max-width: 767px) {
-    .col-row.mo thead { position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); }
-    .col-row.mo thead + tbody tr:first-child  { border-top:1px solid var(--color-2); }
-    .col-row.mo th, .col-row.mo td { border-bottom:0; border-left:0; font-size:var(--font14); }
-    .col-row.mo th { border-left:0; }
-    .col-row.mo tbody tr { display:grid; padding:0 0; grid-template-columns: 135px auto; grid-template-areas: "left right" "left right2"; align-items:start; position:relative; border-bottom:var(--table-border); }
-    .col-row.mo tbody th[scope="row"] {  display:flex; align-items:center; justify-content:center; grid-area:left; height:100%; background-color:var(--table-th) !important; }
-    .col-row.mo tbody td { text-align:left; word-break:break-word; text-align:center; }
-    .col-row.mo tbody td:nth-of-type(1) { grid-area:right; padding:10px 12px 3px; }
-    .col-row.mo tbody td:nth-of-type(2) { grid-area:right2; padding:3px 12px 10px; }
-    .col-row.mo colgroup { display:none; } 
-
-    .caption.total { display:none; }
-    
-    .mo-appendix { border-top:0; }
-    .mo-appendix colgroup{ display:none; }
-    .mo-appendix thead, .mo-appendix thead tr { display:flex; gap:16px; justify-content:flex-end; }
-    .mo-appendix thead tr { border-top:0 !important; margin-bottom:10px; }
-    .mo-appendix thead th { display:inline-flex; align-items:center; gap:4px; padding:0; background:transparent; border:0; font-weight:var(--font-w-m); color:var(--color-45); font-size:var(--font12); }
-    .mo-appendix thead th::before { content:""; display:block; width:10px; height:10px; box-sizing:border-box; }
-    .mo-appendix thead th:first-of-type::before { background:var(--table-th); }
-    .mo-appendix thead th:last-of-type::before { background:var(--white); border:1px solid var(--color-d); }
-    .mo-appendix tbody { border-top:1px solid var(--color-2); }
-    .mo-appendix tbody tr {display: grid; grid-template-columns: 1fr;}
-    .mo-appendix tbody tr th.th-t {border-right: none; background-color: var(--table-th); font-weight: var(--font-w-m);}
-
-    .mo-list colgroup,
-    .mo-list thead,
-    .mo-list tbody .num,
-    .mo-list tbody .employ { display:none; }
-    .mo-list tbody,
-    .mo-list tbody tr { display:block; }
-    .mo-list tbody tr { padding:20px 0 24px; border-bottom:var(--table-border); text-align:right; }
-    .mo-list tbody tr:last-child { border-bottom:0; }
-    .mo-list tbody tr td { display:inline-block; padding:0; border:0; font-size:var(--font12); color:var(--color-6); }
-    .mo-list tbody tr td.title,
-    .mo-list tbody tr td.title span { white-space:unset; }
-    .mo-list tbody tr td.inquiry { position:relative; padding:0 12px 0 24px; }
-    .mo-list tbody tr td.inquiry::before { content:""; display:inline-block; position:absolute; left:0; width:18px; height:18px; background:url("../../images/com/svg/ico_inquiry.svg")no-repeat center center; }
-    .mo-list tbody td.title { display:block; font-size:var(--font16); font-weight:var(--font-w-m); color:var(--color-45); text-align:left; }
-    
-    .mo-list.result tbody tr {position: relative; padding: 20px 0;}
-    .mo-list.result tbody tr::after {content: ''; position: absolute; right:0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../../images/com/svg/ico_arr.svg') no-repeat center center; background-size: contain;}
-    .mo-list.result tbody tr td {display: block; text-align: left; font-size: var(--font16);}
-    .mo-list.result tbody tr td:first-of-type {margin-bottom: 10px; font-weight: var(--font-w-m); color: var(--primary);}
-    .mo-list.result tbody tr td:first-of-type::before {content: '[';}
-    .mo-list.result tbody tr td:first-of-type::after {content: ']';}
-
-    .mo-list tbody tr td.date:only-of-type,
-    .mo-list tbody tr td.date + td.date {margin-right: 10px;}
-    .mo-list tbody tr td.date + td.date::before {content: "~"; margin: 0 4px 0 0;}
-
-    table:has(.no-results) tbody tr td { display:block; }
-    .no-results { padding-top:98px; border:0; }
-    .no-results p { padding-top:86px; min-height:200px; font-size:var(--font20); background-size:80px 66px;}
-    
-    .completed { padding:55px 0 65px; border:0; }
-    .completed p {font-size: var(--font20); font-weight: var(--font-w-m);}
-}
-*/
