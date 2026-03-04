@@ -336,13 +336,8 @@ main.contentWrap > .bottom-container { margin-top:72px; }
 .layerPopup.modal .pop-body table { min-width:unset; }
 .layerPopup.modal .pop-footer { margin-top:42px; }
 
-/**팜업_등록*/
-.pop-body fieldset {  display:block; width:100%; }
-.pop-body .write-content li{ display:grid; grid-template-columns:130px 1fr; column-gap:20px; align-items:center; margin-bottom:20px; }
-.pop-body .write-content li > label { grid-column:1; }
-.pop-body .write-content li > input[type="text"] { grid-column:2; width:100%; }
-.pop-body .info-content li { font-size:var(--font18); background-size:20px; background-position:left 5px; color:var(--color-45); }
-.pop-body .info-content { margin-top:20px; padding:16px 0; border-top:1px solid var(--color-d); }
+/**팜업 버튼*/
+.btn-close { display:block; position:absolute; top:44px; right:34px; width:40px; height:40px; background: var(--ico-close) no-repeat center; background-size:22px; font-size:0;  }
 
 /*---------------------------------------------
 	#푸터

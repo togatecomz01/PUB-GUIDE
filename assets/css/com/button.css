@@ -207,7 +207,6 @@ a:hover, button:hover { border-color:var(--primary); color:var(--primary); }
 .btn-terms-modal { padding: 2px 10px 4px; border: 1px solid var(--btn-modal-border); color:var(--btn-modal-font-color); font-size:var(--btn-download-font-size); }
 .btn-terms-modal:hover { border-color: #222222; color: #222222; }
 
-.btn-close { display:block; position:absolute; top:44px; right:34px; width:40px; height:40px; background: var(--ico-close) no-repeat center; background-size:22px; font-size:0;  }
 .btn-content:has(.btn-pop-more) { display:block; text-align:center; }
 .btn-pop-more { display:block; margin:0 auto; width:auto; text-align:center; font-weight:var(--font-w-m); }
 
