@@ -30,13 +30,6 @@ main.contentWrap { -webkit-box-flex:1; -ms-flex:1 1 auto; flex:1 1 auto; padding
 main.contentWrap > * { margin:0 auto; max-width:1200px; width:100%; padding:0;  }
 main.contentWrap img { max-width:100%; }
 
-.mt-5 { margin-top:5px; }
-.mt-10 { margin-top:10px; }
-.mt-15 { margin-top:15px; }
-.mt-20 { margin-top:20px; }
-.mt-38 { margin-top:38px; } 
-.mt-72 { margin-top:72px; }
-.pt-52 { padding-top:52px; }
 /* form 태그 안 써서 */
 .mt-42 { margin-top:42px; } /* form 태그 안 써서 */
 .point-r { color:var(--point-r) !important; }
